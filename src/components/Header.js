@@ -18,13 +18,18 @@ const Header = () => {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo - Made Larger */}
+          {/* Logo local depuis /public */}
           <div className="flex-shrink-0">
-            <img
-              src="https://customer-assets.emergentagent.com/job_milano-eats-france/artifacts/v70e2197_ChatGPT%20Image%2015%20sept.%202025%2C%2017_49_54.png"
-              alt="Casa Milano"
-              className="h-16 w-auto sm:h-18 md:h-20"
-            />
+            <a href="/" aria-label="Accueil Casa Milano Orsay">
+              <img
+                src="/logo-casamilano.png"
+                alt="Casa Milano Orsay"
+                className="h-16 w-auto sm:h-18 md:h-20"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -81,6 +86,7 @@ const Header = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-gray-700"
+              aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
