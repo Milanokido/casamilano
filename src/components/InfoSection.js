@@ -68,9 +68,12 @@ const InfoSection = () => {
     window.location.href = "tel:0164460505";
   };
 
-  const handleMaps = () => {
-    window.open("https://maps.google.com/?q=17+Avenue+de+Montjay,+91400+Orsay", "_blank");
-  };
+const handleMaps = () => {
+  window.open(
+    "https://www.google.com/maps/place/Casa+milano/@48.6849105,2.1873299,3a,75y,152.38h,93.34t/data=!3m7!1e1!3m5!1smwVmT7CtqNn81BGyzg0kow!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-3.3410712147043427%26panoid%3DmwVmT7CtqNn81BGyzg0kow%26yaw%3D152.38496797615937!7i16384!8i8192!4m6!3m5!1s0x47e5d7b228e06237:0xaf44244756679fc7!8m2!3d48.6847834!4d2.1872281!16s%2Fg%2F11q3zy62mx?entry=ttu",
+    "_blank"
+  );
+};
 
   const formatHours = (day, hours) => {
     if (hours.secondOpen) {
